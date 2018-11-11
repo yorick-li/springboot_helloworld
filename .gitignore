@@ -1,0 +1,10 @@
+# 忽略 .idea 文件夹
+.idea
+
+# 忽略所有 iml 文件
+
+# 忽略 target 文件夹
+target
+
+# 忽略所有class文件
+*.class
