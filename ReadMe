@@ -34,3 +34,9 @@ SpringBoot2.x 学习历程
             6). HttpServletRequest request自动注入获取参数
 
             7). @RequestHeader 获取 http 头信息
+
+        4. SpringBoot基础HTTP接口：post,put,delete请求实战
+            简介：讲解http请求post,put,delete提交方式
+            1). post ---> @PostMapping
+            2). put  ---> @PutMapping
+            3). delete ---> @DeleteMapping
