@@ -1,0 +1,36 @@
+SpringBoot2.x 学习历程
+
+    章节二：
+        1. 配置讲解
+            1). @RestController @RequestMapping 都是 SpringMVC 中的内容
+            2). @RestController = @Controller + @ResponseBody
+            3). @SpringBootApplication = @SpringBootConfiguration + @EnableAutoConfiguration + @ComponentScan
+
+        2. 开发接口必备工具之Postman接口调试工具介绍和使用
+            简介：http接口测试工具安装和讲解
+            1). 接口调试工具的安装和基本使用
+            2). 下载地址：https://www.getpostman.com/
+
+        3. SpringBoot基础HTTP接口GET请求
+            简介：讲解SpringBoot接口，http的Get请求，各个注解使用
+            1). 单一参数 @RequestMapping(path="/{user_id}", method=RequestMethod.GET)
+                @PathVariable
+
+            2). 多个参数 @RequestMapping(path="/{dep_id}/{user_id}", method=RequestMethod.Get)
+                method 属性：可以指定多个请求方法：get post 都可以
+                @RequestMapping(method = {})
+
+            3). 一个顶俩
+                @GetMapping = @RequestMapping(method = RequestMethod.GET)
+                @PostMapping = @RequestMapping(method = RequestMethod.POST)
+                @PutMapping = @RequestMapping(method = RequestMethod.PUT)
+                @DeleteMapping= @RequestMapping(method = RequestMethod.DELETE)
+
+            4). @RequestParam 设置请求参数的默认值
+                pageUser( @RequestParam(defaultValue=0, name="page_index") int from, int to) {}
+
+            5). @RequestMapping + @RequestBody 将请求参数映射到实体类中
+
+            6). HttpServletRequest request自动注入获取参数
+
+            7). @RequestHeader 获取 http 头信息
