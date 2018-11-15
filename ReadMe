@@ -40,3 +40,15 @@ SpringBoot2.x 学习历程
             1). post ---> @PostMapping
             2). put  ---> @PutMapping
             3). delete ---> @DeleteMapping
+
+        5. 常用json框架介绍和Jackson返回结果处理
+            简介：介绍常用json框架和注解
+            1.常用框架---阿里：fastjson，谷歌：gson等
+                JavaBean序列化为json，性能：Jackson > FastJson > Gson > Json-lib 同个结构
+                    测试方法：循环序列化  百万次，次数达到一定才可以看出差别
+
+            2. jackson处理相关内容
+                指定字段不返回：@JsonIgnore
+                指定日期格式：@JsonFormat(pattern="yyyy-MM-dd hh:mm:ss", local="zh", timezone="GMT+8")
+                空字段不返回：@JsonInclude(Include.NON_NULL)
+                指定别名：@JsonProperty
