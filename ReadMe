@@ -52,3 +52,32 @@ SpringBoot2.x 学习历程
                 指定日期格式：@JsonFormat(pattern="yyyy-MM-dd hh:mm:ss", local="zh", timezone="GMT+8")
                 空字段不返回：@JsonInclude(Include.NON_NULL)
                 指定别名：@JsonProperty
+
+        6. springboot目录文件结构讲解
+            简介：讲解目录接口
+
+            1). 目录讲解
+                src/main/java：存放代码
+                src/main/resources
+                    static: 存放静态文件，比如：css、js、image, (访问方式：http://localhost:8080/js/main.js)
+                    templates: 存放静态页面 jsp,html,tpl
+                    config: 存放配置文件，application.properties
+                    resources:
+
+            2). 引入依赖 Thymeleaf
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-thymeleaf</artifactId>
+                </dependency>
+
+            3). 同个文件的加载顺序，静态资源文件
+                spring boot 默认会挨个从：
+                    META/resources > resources > static > public  里面找是否存在相应的资源，如果有则直接返回。
+
+            4). 默认配置
+                a). 官网地址：
+                        https://docs.spring.io/spring-boot/current/reference/html/boot-features-developing-web-applications.html#boot-features-spring-mvc-static-content
+                b). spring.resources.static-locations = classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/
+                                                        classpath:/public/
+
+            5). 静态资源文件存储在CDN
